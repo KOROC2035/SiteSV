@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ils nous font confiance - SMART VISUEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Centhury Gothic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header -->
+    <header class="fixed h-24 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto mt-6 px-6 py-3">
+            <div class="flex items-center justify-between">
+                <nav class="hidden md:flex space-x-8 mx-auto">
+                    <a href="index.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Accueil</a>
+                    <a href="about.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">À propos</a>
+                    <a href="services.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Services</a>
+                    <a href="team.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Notre Équipe</a>
+                    <a href="catalogue.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Catalogue</a>
+                    <a href="projets.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Projets</a>
+                    <a href="clients.html" class="text-[#0580de] hover:text-[#fed403] transition font-bold">Ils nous font confiance</a>  
+                    <a href="contact.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-white rounded-lg p-4 mt-4 w-48 border-2 border-[#fed403]" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600">Accueil</a>
+                <a href="about.html" class="block py-2 text-gray-600">À propos</a>
+                 <a href="services.html" class="block py-2 text-gray-600">Services</a>
+                <a href="team.html" class="block py-2 text-gray-600">Notre Équipe</a>
+                <a href="catalogue.html" class="block py-2 text-gray-600">Catalogue</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="clients.html" class="block py-2 text-[#0580de] font-medium">Ils nous font confiance</a>
+                <a href="contact.html" class="block py-2 text-gray-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Clients Hero -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-r from-[#071bde] to-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Ils nous font confiance</h1>
+            <p class="text-xl max-w-2xl mx-auto">Découvrez les entreprises et institutions qui nous ont choisi pour leurs besoins en impression et communication visuelle.</p>
+        </div>
+    </section>
+
+    <!-- Clients List -->
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0580de] mb-4">Nos clients partenaires</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Des entreprises de divers secteurs nous font confiance pour la qualité de nos services et notre professionnalisme.</p>
+            </div>
+
+            <!-- Corporate Clients -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-[#0580de] mb-8 text-center">Entreprises & Institutions</h3>
+                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center border border-gray-200 hover:border-[#fed403] transition transform hover:scale-105 animate-slideInLeft">
+                        <img src="Rotary.png" alt="Client Logo" class="h-16 object-contain">
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center border border-gray-200 hover:border-[#fed403] transition transform hover:scale-105 animate-slideIn">
+                        <img src="Betmomo-.png" alt="Client Logo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center border border-gray-200 hover:border-[#fed403] transition transform hover:scale-105 animate-slideInRight">
+                        <img src="IECD.png" alt="Client Logo" class="h-16 object-contain">
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center border border-gray-200 hover:border-[#fed403] transition transform hover:scale-105 animate-slideInLeft">
+                        <img src="ONG_EMOH.jpeg" alt="Client Logo" class="h-16 object-contain">
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center border border-gray-200 hover:border-[#fed403] transition transform hover:scale-105 animate-slideIn">
+                        <img src="Logo Resto.jpg" alt="Client Logo" class="h-16 object-contain">
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center border border-gray-200 hover:border-[#fed403] transition transform hover:scale-105 animate-slideInRight">
+                        <img src="KMDS.png" alt="Client Logo" class="h-16 object-contain">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-[#0580de] mb-8 text-center">Témoignages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 text-[#0580de] w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-4">PM</div>
+                            <div>
+                                <h4 class="font-bold">Pierre M.</h4>
+                                <p class="text-gray-500">Directeur Marketing, Entreprise XYZ</p>
+                            </div>
+                        </div>
+                        <div class="text-gray-600 mb-4 italic">"SMART VISUEL a été un partenaire clé dans le déploiement de notre nouvelle identité visuelle. Leur professionnalisme et leur créativité ont dépassé nos attentes."</div>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-pink-100 text-[#ff008c] w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-4">AK</div>
+                            <div>
+                                <h4 class="font-bold">Aminata K.</h4>
+                                <p class="text-gray-500">Responsable Communication, Institution ABC</p>
+                            </div>
+                        </div>
+                        <div class="text-gray-600 mb-4 italic">"Nous travaillons avec SMART VISUEL depuis 3 ans pour tous nos supports imprimés. Leur réactivité et la qualité constante de leur travail sont impressionnantes."</div>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Partnership -->
+    <section class="py-20 px-6 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#0580de] mb-6">Devenez notre partenaire</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Vous souhaitez rejoindre nos clients satisfaits et bénéficier de nos services professionnels ?</p>
+            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-8 py-3 rounded-lg font-medium transition transform hover:scale-105">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-6 bg-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Nous sommes prêt à vous accompagner.</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous dès aujourd'hui pour discuter de vos besoins en impression et communication visuelle.</p>
+            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-8 py-3 rounded-lg font-medium transition transform hover:scale-105">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="SM_logo.png" alt="Logo SM" class="rounded-full shadow-2xl w-36 h-36">
+                    </div>
+                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication visuelle.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Notre Equipe</a></li>
+                        <li><a href="catalogue.html" class="text-gray-400 hover:text-white transition">Catalogue</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a></li>
+                        <li><a href="clients.html" class="text-gray-400 hover:text-white transition">Ils nous font confiance</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Nos services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="catalogue-numerique.html" class="text-gray-400 hover:text-white transition">Impression Numérique</a></li>
+                        <li><a href="catalogue-offset.html" class="text-gray-400 hover:text-white transition">Impression Offset</a></li>
+                        <li><a href="catalogue-communication.html" class="text-gray-400 hover:text-white transition">Communication Visuelle</a></li>
+                        <li><a href="catalogue-gadgeterie.html" class="text-gray-400 hover:text-white transition">Gadgeterie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Yamoussoukro, Centre commercial Mo-Faitai bureau N° 20</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +225 27 30 64 02 78</li>
+                        <li class="flex items-center"><i class="fas fa-mobile-alt mr-2"></i> +225 07 59 72 52 72</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> smartvisuel1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 SMART VISUEL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

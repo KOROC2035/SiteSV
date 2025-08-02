@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SMART VISUEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Centhury Gothic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        @media(max-width: 768px) {
+            #BS1{
+                margin: 4px;
+                width: 48 px;
+            }
+            #BS2{
+                margin: 4px;
+                width: full;
+            }
+            #BS3{
+                margin: 4px;
+                width: full;
+            }
+            #BS4{
+                margin: 4px;
+                width: full;
+            }
+            #BS5{
+                margin: 4px;
+                width: full;
+            }
+            #BS6{
+                margin: 4px;
+                width: full;
+            }
+            #BS7{
+                margin: 4px;
+                width: full;
+            }
+            #BS8{
+                margin: 4px;
+                width: full;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-Century Gothic bg-gray-50">
+    <!-- Header -->
+    <header class="fixed h-24 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto mt-6 px-6 py-3">
+            <div class="flex items-center justify-between">
+                <nav class="hidden md:flex space-x-8 mx-auto">
+                    <a href="index.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Accueil</a>
+                    <a href="about.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">À propos</a>
+                    <a href="services.html" class="text-[#0580de] hover:text-[#fed403] transition font-bold">Services</a>
+                    <a href="team.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Notre Équipe</a>
+                    <a href="catalogue.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Catalogue</a>
+                    <a href="projets.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Projets</a>
+                    <a href="clients.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Ils nous font confiance</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-white rounded-lg p-4 mt-4 w-48 border-2 border-[#fed403]" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600">Accueil</a>
+                <a href="about.html" class="block py-2 text-gray-600">À propos</a>
+                <a href="services.html" class="block py-2 text-[#0580de] font-medium">Services</a>
+                <a href="team.html" class="block py-2 text-gray-600 font-medium">Notre Équipe</a>
+                <a href="catalogue.html" class="block py-2 text-gray-600">Catalogue</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="clients.html" class="block py-2 text-gray-600">Ils nous font confiance</a>
+                <a href="contact.html" class="block py-2 text-gray-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-r from-[#071bde] to-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Nos Services</h1>
+            <p class="text-xl max-w-2xl mx-auto">Découvrez notre gamme complète de services en impression et communication visuelle.</p>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl font-bold text-[#0580de] mb-4">Nos Spécialités</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nous offrons des solutions complètes pour tous vos besoins en impression et communication visuelle.</p>
+            </div>
+
+            <!-- Digital Printing -->
+            <div class="flex flex-col md:flex-row items-center mb-20">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-slideInLeft">
+                    <img src="Machine grand format.jpg" alt="Impression Numérique" class="rounded-lg shadow-xl border-8 border-[#0580de]">
+                </div>
+                <div class="md:w-1/2 animate-slideInRight">
+                    <h3 class="text-2xl font-bold text-[#0580de] mb-4">Impression Numérique</h3>
+                    <p class="text-gray-600 mb-4">Solution idéale pour les grands tirages avec une qualité exceptionnelle et des délais rapides.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Bâche, Vinyle</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Micro-preforé</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Kakemono</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Dos bleu ...</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition transform hover:scale-105" id="BS1">Demander un devis</a>
+                    <a href="catalogue-numerique.html" class="inline-block bg-white text-[#ff008c] ml-4 px-6 py-2 rounded-lg font-medium transition transform hover:scale-105 border-2 border-[#ff008c]" id="BS2">Voir le catalogue</a>
+                </div>
+            </div>
+
+            <!-- Offset Printing -->
+            <div class="flex flex-col md:flex-row-reverse items-center mb-20">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pl-10 animate-slideInRight">
+                    <img src="Machine offset.jpeg" alt="Impression Offset" class="rounded-lg shadow-xl border-8 border-[#0580de]">
+                </div>
+                <div class="md:w-1/2 animate-slideInLeft">
+                    <h3 class="text-2xl font-bold text-[#0580de] mb-4">Impression Offset</h3>
+                    <p class="text-gray-600 mb-4">Technique d'impression professionnelle pour les grands tirages avec une qualité et une constance inégalées.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Brochures, Catalogues, Plaquettes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Affiches, Flyers, Cartes de visite</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Enveloppes, Etiquettes, Papier entête</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Faire - part, Carnet, Livret scolaire ...</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition transform hover:scale-105" id="BS3">Demander un devis</a>
+                    <a href="catalogue-offset.html" class="inline-block bg-white text-[#ff008c] ml-4 px-6 py-2 rounded-lg font-medium transition transform hover:scale-105 border-2 border-[#ff008c]" id="BS4">Voir le catalogue</a>
+                </div>
+            </div>
+
+            <!-- Visual Communication -->
+            <div class="flex flex-col md:flex-row items-center mb-20">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-slideInLeft">
+                    <img src="Communication.png" alt="Communication Visuelle" class="rounded-lg shadow-xl border-8 border-[#0580de]">
+                </div>
+                <div class="md:w-1/2 animate-slideInRight">
+                    <h3 class="text-2xl font-bold text-[#0580de] mb-4">Communication Visuelle</h3>
+                    <p class="text-gray-600 mb-4">Créez une identité visuelle forte et impactante pour votre marque ou votre événement.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Panneaux Publicitaires, lettrage 3D</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Enseingne lumineuse</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Branding auto</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Stands & PLV</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Totems ...</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition transform hover:scale-105" id="BS5">Demander un devis</a>
+                    <a href="catalogue-communication.html" class="inline-block bg-white text-[#ff008c] ml-4 px-6 py-2 rounded-lg font-medium transition transform hover:scale-105 border-2 border-[#ff008c]" id="BS6">Voir le catalogue</a>
+                </div>
+            </div>
+
+            <!-- Gadgeterie -->
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pl-10 animate-slideInRight">
+                    <img src="Gadget.png" alt="Gadgeterie" class="rounded-lg shadow-xl border-8 border-[#0580de]">
+                </div>
+                <div class="md:w-1/2 animate-slideInLeft">
+                    <h3 class="text-2xl font-bold text-[#0580de] mb-4">Gadgeterie</h3>
+                    <p class="text-gray-600 mb-4">La gadgeterie désigne l’univers des gadgets, c’est-à-dire de petits objets ou dispositifs technologiques, souvent innovants, conçus pour rendre la vie plus facile, plus amusante ou plus connectée.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Tee-shirts personnalisés</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Casquettes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Tasses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Sacs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#ff008c] mt-1 mr-2"></i>
+                            <span class="text-gray-600">Clés USB, Stylos ...</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition transform hover:scale-105" id="BS7">Demander un devis</a>
+                    <a href="catalogue-gadgeterie.html" class="inline-block bg-white text-[#ff008c] ml-4 px-6 py-2 rounded-lg font-medium transition transform hover:scale-105 border-2 border-[#ff008c]" id="BS8">Voir le catalogue</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-[#0580de] mb-16">Autres Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design Graphique</h3>
+                    <p class="text-gray-600 mb-4">Création de designs uniques et percutants pour vos supports de communication.</p>
+                    <button onclick="openModal('designModal')" class="text-[#ff008c] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        En savoir plus →
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Textile & Sérigraphie</h3>
+                    <p class="text-gray-600 mb-4">Personnalisation de vêtements et textiles pour vos équipes ou événements.</p>
+                    <button onclick="openModal('textileModal')" class="text-[#ff008c] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        En savoir plus →
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Objets Publicitaires</h3>
+                    <p class="text-gray-600 mb-4">Large gamme d'objets personnalisables pour votre communication promotionnelle.</p>
+                    <button onclick="openModal('objectsModal')" class="text-[#ff008c] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        En savoir plus →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Design Graphique Modal -->
+    <div id="designModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-[#0580de]">Design Graphique</h3>
+                <button onclick="closeModal('designModal')" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="text-gray-600 space-y-4">
+                <p>Nous offrons des services complets de design graphique pour tous vos besoins en communication visuelle :</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Création de logos et identité visuelle</li>
+                    <li>Conception de chartes graphiques</li>
+                    <li>Design de supports print (flyers, brochures, affiches)</li>
+                    <li>Maquettes et prototypes digitaux</li>
+                    <li>Illustrations personnalisées</li>
+                </ul>
+                <p>Notre équipe de designers qualifiés travaille en étroite collaboration avec vous pour créer des designs qui reflètent parfaitement votre identité de marque.</p>
+            </div>
+            <div class="mt-6">
+                <button onclick="closeModal('designModal')" class="bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Textile & Sérigraphie Modal -->
+    <div id="textileModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-[#0580de]">Textile & Sérigraphie</h3>
+                <button onclick="closeModal('textileModal')" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="text-gray-600 space-y-4">
+                <p>Nos services d'impression textile et sérigraphie incluent :</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Personnalisation de t-shirts, polos et vestes</li>
+                    <li>Création de tenues d'entreprise</li>
+                    <li>Textiles promotionnels pour événements</li>
+                    <li>Sérigraphie de haute qualité</li>
+                    <li>Broderie numérique</li>
+                    <li>Transferts thermiques</li>
+                </ul>
+                <p>Nous utilisons des encres écologiques et des méthodes d'impression durables pour des résultats à la fois beaux et responsables.</p>
+            </div>
+            <div class="mt-6">
+                <button onclick="closeModal('textileModal')" class="bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Objets Publicitaires Modal -->
+    <div id="objectsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-[#0580de]">Objets Publicitaires</h3>
+                <button onclick="closeModal('objectsModal')" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="text-gray-600 space-y-4">
+                <p>Notre sélection d'objets publicitaires comprend :</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Stylos, carnets et articles de bureau</li>
+                    <li>Goodies électroniques (powerbanks, clés USB)</li>
+                    <li>Textiles promotionnels (sacs, casquettes)</li>
+                    <li>Articles de cuisine et de maison</li>
+                    <li>Objets high-tech personnalisés</li>
+                    <li>Cadeaux d'affaires premium</li>
+                </ul>
+                <p>Nous vous accompagnons dans le choix des objets les plus adaptés à votre cible et votre budget, avec des techniques de personnalisation variées.</p>
+            </div>
+            <div class="mt-6">
+                <button onclick="closeModal('objectsModal')" class="bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-6 bg-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Nous sommes prêt à vous accompagner.</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Notre équipe est à votre disposition pour discuter de vos besoins et vous proposer la solution la plus adaptée.</p>
+            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-8 py-3 rounded-lg font-medium transition transform hover:scale-105">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="SM_logo.png" alt="Logo SM" class="rounded-full shadow-2xl w-36 h-36">
+                    </div>
+                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication visuelle.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Notre Equipe</a></li>
+                        <li><a href="catalogue.html" class="text-gray-400 hover:text-white transition">Catalogue</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a></li>
+                        <li><a href="clients.html" class="text-gray-400 hover:text-white transition">Ils nous font confiance</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Nos services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="catalogue-numerique.html" class="text-gray-400 hover:text-white transition">Impression Numérique</a></li>
+                        <li><a href="catalogue-offset.html" class="text-gray-400 hover:text-white transition">Impression Offset</a></li>
+                        <li><a href="catalogue-communication.html" class="text-gray-400 hover:text-white transition">Communication Visuelle</a></li>
+                        <li><a href="catalogue-gadgeterie.html" class="text-gray-400 hover:text-white transition">Gadgeterie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Yamoussoukro, Centre commercial Mo-Faitai bureau N° 20</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +225 27 30 64 02 78</li>
+                        <li class="flex items-center"><i class="fas fa-mobile-alt mr-2"></i> +225 07 59 72 52 72</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> smartvisuel1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 SMART VISUEL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

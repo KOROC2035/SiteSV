@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue de Projets - SMART VISUEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Century Gothic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        /* Style UNIQUEMENT pour mobile - ne modifie pas le desktop */
+        @media (max-width: 767px) {
+            /* Force l'affichage sur une seule colonne */
+            .grid.grid-cols-1.lg\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Ajustement des marges pour mobile */
+            .mb-20 {
+                margin-bottom: 2.5rem !important;
+            }
+            
+            /* Espacement entre les éléments */
+            .gap-10 {
+                gap: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-Century Gothic bg-gray-50">
+    <!-- Header (inchangé) -->
+    <header class="fixed h-24 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto mt-6 px-6 py-3">
+            <div class="flex items-center justify-between">
+                <nav class="hidden md:flex space-x-8 mx-auto">
+                    <a href="index.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Accueil</a>
+                    <a href="about.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">À propos</a>
+                    <a href="services.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Services</a>
+                    <a href="team.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Notre Équipe</a>
+                    <a href="catalogue.html" class="text-[#0580de] hover:text-[#fed403] transition font-bold">Catalogue</a>
+                    <a href="projets.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Projets</a>
+                    <a href="clients.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Ils nous font confiance</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-white rounded-lg p-4 mt-4 w-48 border-2 border-[#fed403]" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600">Accueil</a>
+                <a href="about.html" class="block py-2 text-gray-600">À propos</a>
+                <a href="services.html" class="block py-2 text-gray-600">Services</a>
+                <a href="team.html" class="block py-2 text-gray-600">Notre Équipe</a>
+                <a href="catalogue.html" class="block py-2 text-[#0580de] font-medium">Catalogue</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="clients.html" class="block py-2 text-gray-600">Ils nous font confiance</a>
+                <a href="contact.html" class="block py-2 text-gray-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (inchangé) -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Communication visuelle</h1>
+            <p class="text-xl max-w-2xl mx-auto">Nos réalisations en impression numérique haute qualité.</p>
+        </div>
+    </section>
+
+    <!-- Services Navigation (inchangé) -->
+    <section class="py-12 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-center gap-4">
+                <!--<a href="tous-produits.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                    <i class="fas fa-table mr-2"></i> Tous les produits
+                </a>-->
+                <a href="catalogue-numerique.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                    <i class="fas fa-print mr-2"></i> Impression Numérique
+                </a>
+                <a href="catalogue-offset.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                    <i class="fas fa-industry mr-2"></i> Impression Offset
+                </a>
+                <a href="catalogue-communication.html" class="bg-[#ff008c] text-white px-6 py-3 rounded-lg font-medium transition transform flex items-center">
+                    <i class="fas fa-paint-brush mr-2"></i> Communication visuelle
+                </a>
+                <a href="catalogue-gadgeterie.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                    <i class="fas fa-gift mr-2"></i> Gadgeterie
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille produit - Modifié seulement pour mobile -->
+    <section class="py-20 px-6 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-12">
+            <!-- Panneaux publicitaires -->
+            <div id="banque-ci" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 animate-slideInLeft">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="Com.png" alt="Projet Banque CI" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0580de] mb-4">Panneaux publicitaires</h2>
+                    <p class="text-gray-600 mb-4">Les panneaux publicitaires sont des supports incontournables pour capter l’attention et promouvoir une marque auprès d’un large public. Chez **SMART VISUEL**, des experts conçoivent des panneaux sur-mesure – qu’ils soient lumineux, digitaux ou classiques – afin de **refléter fidèlement votre identité visuelle** et répondre efficacement à vos objectifs de communication.</p>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                </div>
+            </div>
+
+            <!-- Lettrage 3D -->
+            <div id="Orange ci" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 animate-slideInRight">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="Lettrage_3D.png" alt="Projet Banque CI" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0580de] mb-4">Lettrage 3D</h2>
+                    <p class="text-gray-600 mb-4">Le lettrage 3D est un moyen impactant de valoriser votre marque en ajoutant du relief et de la personnalité à votre identité visuelle. Idéal pour une façade, un showroom ou un événement, il attire le regard et marque les esprits. Grâce à des matériaux variés et des finitions sur-mesure (acrylique, métal, rétroéclairage), SMART VISUEL conçoit des lettres 3D adaptées à votre image et à vos besoins.</p>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                </div>
+            </div>
+
+            <!-- Enseigne lumineuse -->
+            <div id="banque-ci" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 animate-slideInLeft">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="Enseigne_lumineuse.png" alt="Projet Banque CI" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0580de] mb-4">Enseigne lumineuse</h2>
+                    <p class="text-gray-600 mb-4">Les enseignes lumineuses sont des outils de communication puissants qui permettent d’attirer l’attention, de renforcer l’identité visuelle et de se démarquer de la concurrence. Qu’il s’agisse de lettres découpées, de caissons ou de totems éclairés, chaque enseigne doit être conçue avec soin. Chez SMART VISUEL, nos experts vous accompagnent de la conception à l’installation pour créer une solution sur-mesure, esthétique et mémorable, parfaitement alignée avec votre image de marque.</p>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                </div>
+            </div>
+
+            <!-- Branding auto -->
+            <div id="Orange ci" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 animate-slideInRight">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="Branding_auto.png" alt="Projet Banque CI" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0580de] mb-4">Branding auto</h2>
+                    <p class="text-gray-600 mb-4">Le branding automobile est crucial pour se démarquer dans un secteur hautement concurrentiel. Une identité visuelle forte, cohérente et professionnelle permet de créer un lien durable avec les clients. Que ce soit pour un constructeur, un concessionnaire ou un équipementier, chaque support – du logo au design des véhicules – doit refléter qualité, fiabilité et innovation. Chez SMART VISUEL, nos experts mettent en œuvre leur savoir-faire pour construire une image de marque solide et différenciante.</p>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                </div>
+            </div>
+
+            <!-- Stands & PLV -->
+            <div id="Orange ci" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 animate-slideInLeft">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="Stand.png" alt="Projet Banque CI" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0580de] mb-4">Stands & PLV</h2>
+                    <p class="text-gray-600 mb-4">Les stands et PLV (Publicité sur Lieu de Vente) sont des outils clés pour capter l’attention et valoriser votre marque lors d’événements, salons ou en point de vente. Chez SMART VISUEL, nous créons des solutions sur-mesure – mobiliers design, signalétique ou supports innovants – qui reflètent fidèlement votre identité visuelle et répondent efficacement à vos objectifs de communication.</p>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                </div>
+            </div>
+
+            <!-- Totems -->
+            <div id="Orange ci" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 animate-slideInRight">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="Totem.png" alt="Projet Banque CI" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-[#0580de] mb-4">Totems</h2>
+                    <p class="text-gray-600 mb-4">Le totem publicitaire est une solution élégante et percutante pour affirmer votre identité visuelle. Conçu avec des matériaux de qualité et entièrement personnalisable, il attire l’attention et valorise votre marque de manière professionnelle, que ce soit dans un hall d’accueil, un showroom ou lors d’un événement.</p>
+                    <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action (inchangé) -->
+    <section class="py-20 px-6 bg-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Un projet similaire en tête?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous pour discuter de vos besoins spécifiques.</p>
+            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-8 py-3 rounded-lg font-medium transition transform hover:scale-105">Parlez-nous de votre projet</a>
+        </div>
+    </section>
+
+    <!-- Footer (inchangé) -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="SM_logo.png" alt="Logo SM" class="rounded-full shadow-2xl w-36 h-36">
+                    </div>
+                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication visuelle.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Notre Equipe</a></li>
+                        <li><a href="catalogue.html" class="text-gray-400 hover:text-white transition">Catalogue</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a></li>
+                        <li><a href="clients.html" class="text-gray-400 hover:text-white transition">Ils nous font confiance</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Nos services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="catalogue-numerique.html" class="text-gray-400 hover:text-white transition">Impression Numérique</a></li>
+                        <li><a href="catalogue-offset.html" class="text-gray-400 hover:text-white transition">Impression Offset</a></li>
+                        <li><a href="catalogue-communication.html" class="text-gray-400 hover:text-white transition">Communication Visuelle</a></li>
+                        <li><a href="catalogue-gadgeterie.html" class="text-gray-400 hover:text-white transition">Gadgeterie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Yamoussoukro, Centre commercial Mo-Faitai bureau N° 20</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +225 27 30 64 02 78</li>
+                        <li class="flex items-center"><i class="fas fa-mobile-alt mr-2"></i> +225 07 59 72 52 72</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> smartvisuel1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 SMART VISUEL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

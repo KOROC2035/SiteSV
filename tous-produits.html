@@ -1,0 +1,589 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous nos services - SMART VISUEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url('fonts/CenturyGothic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Century Gothic', 'Roboto', sans-serif;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link.active {
+            background-color: #0580de;
+            color: white;
+        }
+        .nav-link.active:hover {
+            background-color: #0468b6;
+        }
+        @media (max-width: 1023px) {
+            .mobile-menu-button {
+                display: block;
+            }
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">-->
+    <!-- Header -->
+    <!--<header class="fixed w-full bg-white shadow-md z-50 h-24">
+        <div class="container mx-auto px-4 py-3 mt-6">
+            <div class="flex items-center justify-between h-full">
+                <div class="md:hidden">
+                    <img src="SM_logo.png" alt="SMART VISUEL Logo" class="h-12">
+                </div>
+                
+                <button class="md:hidden focus:outline-none mobile-menu-button" id="main-menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <nav class="hidden md:flex items-center justify-center flex-1">
+                    <div class="flex space-x-4 lg:space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Accueil</a>
+                        <a href="about.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">À propos</a>
+                        <a href="services.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Services</a>
+                        <a href="team.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Notre Équipe</a>
+                        <a href="catalogue.html" class="text-[#0580de] hover:text-[#fed403] transition font-bold">Catalogue</a>
+                        <a href="projets.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Projets</a>
+                        <a href="clients.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Ils nous font confiance</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>-->
+
+    <!-- Mobile Main Menu -->
+    <!--<div class="md:hidden hidden fixed inset-0 bg-black bg-opacity-50 z-40" id="mobile-main-menu-overlay"></div>
+    <div class="md:hidden hidden fixed inset-y-0 left-0 w-64 bg-white z-50 shadow-lg overflow-y-auto" id="mobile-main-menu">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-6">
+                <img src="SM_logo.png" alt="SMART VISUEL Logo" class="h-10">
+                <button id="close-main-menu" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-2">
+                <a href="index.html" class="block py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Accueil</a>
+                <a href="about.html" class="block py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">À propos</a>
+                <a href="all-services.html" class="block py-2 px-4 bg-[#0580de] text-white rounded">Tous nos services</a>
+                <a href="team.html" class="block py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Équipe</a>
+                <a href="projets.html" class="block py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Projets</a>
+                <a href="contact.html" class="block py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Contact</a>
+            </nav>
+        </div>
+    </div>-->
+
+    <!-- Sidebar and Content Container -->
+    <!--<div class="flex pt-24 min-h-screen">-->
+        <!-- Sidebar Navigation - Desktop -->
+        <!--<aside class="hidden lg:block w-64 bg-white shadow-md fixed h-full overflow-y-auto z-30">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-[#0580de] mb-6">Catégories de services</h2>
+                <nav class="space-y-2">
+                    <a href="#impression-numerique" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Impression Numérique</a>
+                    <a href="#impression-offset" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Impression Offset</a>
+                    <a href="#communication-visuelle" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Communication Visuelle</a>
+                    <a href="#gadgeterie" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Gadgeterie</a>
+                </nav>
+            </div>
+        </aside>-->
+
+        <!-- Mobile Sidebar Toggle Button -->
+        <!--<button class="lg:hidden fixed left-4 bottom-4 bg-[#0580de] text-white p-3 rounded-full shadow-lg z-40" id="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>-->
+
+        <!-- Mobile Sidebar Navigation -->
+        <!--<aside class="lg:hidden fixed inset-y-0 left-0 w-64 bg-white shadow-md z-40 transform -translate-x-full transition-transform duration-300 overflow-y-auto" id="mobile-sidebar">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-[#0580de]">Catégories</h2>
+                    <button id="close-sidebar" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <nav class="space-y-2">
+                    <a href="#impression-numerique" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Impression Numérique</a>
+                    <a href="#impression-offset" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Impression Offset</a>
+                    <a href="#communication-visuelle" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Communication Visuelle</a>
+                    <a href="#gadgeterie" class="block nav-link py-2 px-4 text-gray-600 hover:bg-[#0580de] hover:text-white rounded transition">Gadgeterie</a>
+                </nav>
+            </div>
+        </aside>-->
+
+        <!-- Main Content -->
+        <!--<main class="flex-1 lg:ml-64 p-6">-->
+            <!-- Hero Section -->
+            <!--<section class="bg-gradient-to-r from-[#38b0e5] to-[#0580de] text-white rounded-xl p-8 mb-2">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Tous nos services</h1>
+                <p class="text-lg md:text-xl">Découvrez l'ensemble de nos solutions professionnelles en impression et communication visuelle.</p>
+            </section>-->
+
+            <!-- Services Navigation -->
+            <!--<section class="py-12 px-6 bg-white">
+                <div class="container mx-auto">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="tous-produits.html" class="bg-[#ff008c] text-white px-6 py-3 rounded-lg font-medium transition transform flex items-center">
+                            <i class="fas fa-table mr-2"></i> Tous les produits
+                        </a>
+                        <a href="catalogue-numerique.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                            <i class="fas fa-print mr-2"></i> Impression Numérique
+                        </a>
+                        <a href="catalogue-offset.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                            <i class="fas fa-industry mr-2"></i> Impression Offset
+                        </a>
+                        <a href="catalogue-communication.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                            <i class="fas fa-paint-brush mr-2"></i> Communication Visuelle
+                        </a>
+                        <a href="catalogue-gadgeterie.html" class="bg-[#0580de] hover:bg-[#071bde] text-white px-6 py-3 rounded-lg font-medium transition transform hover:scale-105 flex items-center">
+                            <i class="fas fa-gift mr-2"></i> Gadgeterie
+                        </a>
+                    </div>
+                </div>
+            </section>-->
+
+            <!-- Featured Service -->
+            <!--<section id="featured-service" class="mb-16 bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="lg:order-1">
+                        <img src="Machine grand format.jpg" alt="Service vedette" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:order-2">
+                        <span class="text-sm text-[#ff008c] font-medium">Service vedette</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#0580de] mt-2 mb-4">Packaging personnalisé</h2>
+                        <p class="text-gray-600 mb-6">Nous créons des solutions d'emballage sur mesure qui protègent vos produits tout en renforçant votre image de marque.</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2 mb-6">
+                            <li>Design unique adapté à votre identité visuelle</li>
+                            <li>Matériaux de haute qualité et écologiques</li>
+                            <li>Options d'impression numérique et offset</li>
+                            <li>Finitions spéciales disponibles</li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-[#0580de] hover:bg-[#0468b6] text-white px-6 py-2 rounded-lg font-medium transition">Demander un devis</a>
+                    </div>
+                </div>
+            </section>-->
+
+            <!-- Services Grid -->
+            <!--<section id="services-grid">-->
+                <!-- Impression Numérique -->
+                <!--<h2 id="impression-numerique" class="text-2xl md:text-3xl font-bold text-[#0580de] mb-6 pt-8">Impression Numérique</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">-->
+                    <!-- Service 1 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/flyers.jpg" alt="Bâche" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Bâche</h3>
+                            <p class="text-gray-600 mb-4">Impression haute qualité de supports publicitaires en différents formats et finitions.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 2 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/cartes-visite.jpg" alt="Vinyle" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Vinyle</h3>
+                            <p class="text-gray-600 mb-4">Cartes professionnelles avec options de vernis sélectif, dorure et découpe spéciale.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 3 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Micro-perforé" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Micro-perforé</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 4 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Kakemono" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Kakemono</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 5 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Dos bleu" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Dos bleu</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!-- Impression Offset -->
+                <!--<h2 id="impression-offset" class="text-2xl md:text-3xl font-bold text-[#0580de] mb-6 pt-8">Impression Offset</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">-->
+                    <!-- Service 1 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/catalogues.jpg" alt="Brochures & plaquettes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Brochures & plaquettes</h3>
+                            <p class="text-gray-600 mb-4">Production de supports imprimés haut de gamme pour vos produits et services.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 2 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/magazines.jpg" alt="Catalogue" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Catalogue</h3>
+                            <p class="text-gray-600 mb-4">Impression professionnelle de publications périodiques en grands tirages.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 3 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Affiches & flyers" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Affiches & flyers</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 4 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Carnets" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Carnets</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 5 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Cartes de visite" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Cartes de visite</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                
+                    <!-- Service 6 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Papier-entête" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Papier-entête</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 7 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Enveloppe" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Envelope</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 8 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Etiquettes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Etiquettes</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 9 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Faire-part" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Faire-part</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 10 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/emballage.jpg" alt="Livret scolaire" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Livret scolaire</h3>
+                            <p class="text-gray-600 mb-4">Solutions d'emballage imprimé pour vos produits avec finitions spéciales.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!-- Communication visuelle -->
+                <!--<h2 id="impression-numerique" class="text-2xl md:text-3xl font-bold text-[#0580de] mb-6 pt-8">Communication visuelle</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">-->
+                    <!-- Service 1 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/flyers.jpg" alt="Panneaux publicitaires" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Panneaux publicitaires</h3>
+                            <p class="text-gray-600 mb-4">Impression haute qualité de supports publicitaires en différents formats et finitions.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 2 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/cartes-visite.jpg" alt="Lettrage 3D" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Lettrage 3D</h3>
+                            <p class="text-gray-600 mb-4">Cartes professionnelles avec options de vernis sélectif, dorure et découpe spéciale.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 3 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Enseigne lumineuse" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Enseigne lumineuse</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 4 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Branding auto" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Branding auto</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 5 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Stand & PLV" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Stand & PLV</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 6 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Totems" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Totems</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Gadgeterie -->
+                <!--<h2 id="impression-numerique" class="text-2xl md:text-3xl font-bold text-[#0580de] mb-6 pt-8">Communication visuelle</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">-->
+                    <!-- Service 1 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/flyers.jpg" alt="Tee-shirt" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Tee-shirt</h3>
+                            <p class="text-gray-600 mb-4">Impression haute qualité de supports publicitaires en différents formats et finitions.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 2 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/cartes-visite.jpg" alt="Casquettes" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Casquettes</h3>
+                            <p class="text-gray-600 mb-4">Cartes professionnelles avec options de vernis sélectif, dorure et découpe spéciale.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Service 3 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Tasses" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Tasses</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 4 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Clé USB" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Clé USB</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 5 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Sacs" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Sacs</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>-->
+
+                    <!-- Service 6 -->
+                    <!--<div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="assets/images/affiches.jpg" alt="Stylos" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Stylos</h3>
+                            <p class="text-gray-600 mb-4">Impression grand format pour vos campagnes publicitaires et événements.</p>
+                            <a href="#" class="text-[#0580de] font-medium hover:text-[#fed403] transition">En savoir plus →</a>
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </div>-->
+
+    <!-- Footer -->
+    <!--<footer class="bg-gray-900 text-white py-8 md:py-12 px-4 lg:ml-64">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="SM_logo.png" alt="Logo SM" class="rounded-full shadow-2xl w-36 h-36">
+                    </div>
+                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication visuelle.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Notre Équipe</a></li>
+                        <li><a href="clients.html" class="text-gray-400 hover:text-white transition">Ils nous font confiance</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Nos services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="catalogue-numerique.html" class="text-gray-400 hover:text-white transition">Impression Numérique</a></li>
+                        <li><a href="catalogue-offset.html" class="text-gray-400 hover:text-white transition">Impression Offset</a></li>
+                        <li><a href="catalogue-communication.html" class="text-gray-400 hover:text-white transition">Communication Visuelle</a></li>
+                        <li><a href="catalogue-gadgeterie.html" class="text-gray-400 hover:text-white transition">Gadgeterie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Yamoussoukro, Centre commercial Mo-Faitai bureau N° 20</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +225 27 30 64 02 78</li>
+                        <li class="flex items-center"><i class="fas fa-mobile-alt mr-2"></i> +225 07 59 72 52 72</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> smartvisuel1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 SMART VISUEL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile principal
+        const mainMenuToggle = document.getElementById('main-menu-toggle');
+        const mobileMainMenu = document.getElementById('mobile-main-menu');
+        const mobileMainMenuOverlay = document.getElementById('mobile-main-menu-overlay');
+        const closeMainMenu = document.getElementById('close-main-menu');
+
+        mainMenuToggle.addEventListener('click', () => {
+            mobileMainMenu.classList.remove('hidden');
+            mobileMainMenuOverlay.classList.remove('hidden');
+        });
+
+        closeMainMenu.addEventListener('click', () => {
+            mobileMainMenu.classList.add('hidden');
+            mobileMainMenuOverlay.classList.add('hidden');
+        });
+
+        mobileMainMenuOverlay.addEventListener('click', () => {
+            mobileMainMenu.classList.add('hidden');
+            mobileMainMenuOverlay.classList.add('hidden');
+        });
+
+        // Sidebar mobile
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const closeSidebar = document.getElementById('close-sidebar');
+
+        sidebarToggle.addEventListener('click', () => {
+            mobileSidebar.classList.toggle('translate-x-0');
+            mobileSidebar.classList.toggle('-translate-x-full');
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            mobileSidebar.classList.remove('translate-x-0');
+            mobileSidebar.classList.add('-translate-x-full');
+        });
+
+        // Highlight active nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>-->

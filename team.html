@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Équipe - SMART VISUEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Centhury Gothic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header -->
+    <header class="fixed h-24 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto mt-6 px-6 py-3">
+            <div class="flex items-center justify-between">
+                <nav class="hidden md:flex space-x-8 mx-auto">
+                    <a href="index.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Accueil</a>
+                    <a href="about.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">À propos</a>
+                    <a href="services.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Services</a>
+                    <a href="team.html" class="text-[#0580de] hover:text-[#fed403] transition font-bold">Notre Équipe</a>
+                    <a href="catalogue.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Catalogue</a>
+                    <a href="projets.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Projets</a>
+                    <a href="clients.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Ils nous font confiance</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-white rounded-lg p-4 mt-4 w-48 border-2 border-[#fed403]" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600">Accueil</a>
+                <a href="about.html" class="block py-2 text-gray-600">À propos</a>
+                <a href="services.html" class="block py-2 text-gray-600">Services</a>
+                <a href="team.html" class="block py-2 text-[#0580de] font-medium">Notre Équipe</a>
+                <a href="catalogue.html" class="block py-2 text-gray-600">Catalogue</a>
+                <a href="projets.html" class="block py-2 text-gray-600">Projets</a>
+                <a href="clients.html" class="block py-2 text-gray-600">Ils nous font confiance</a>
+                <a href="contact.html" class="block py-2 text-gray-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Team Hero -->
+    <section class="pt-32 pb-20 px-6 bg-gradient-to-r from-[#071bde] to-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Notre Équipe</h1>
+            <p class="text-xl max-w-2xl mx-auto">Découvrez les talents et les experts qui font de SMART VISUEL un leader en impression et communication visuelle.</p>
+        </div>
+    </section>
+
+    <!-- Team Members -->
+    <section class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0580de] mb-4">Rencontrez notre équipe</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Une équipe passionnée et expérimentée à votre service pour réaliser vos projets avec excellence.</p>
+            </div>
+
+            <!-- Leadership Team -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-[#0580de] mb-8 text-center">Direction</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl animate-slideIn">
+                        <div class="bg-gray-200 w-48 h-48 mx-auto rounded-full mb-6 overflow-hidden">
+                            <img src="" alt="Directeur Général" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold">Tchan J.</h4>
+                        <p class="text-[#ff008c] mb-4">Chef de projets</p>
+                        <p class="text-gray-600 mb-4">Responsable de la planification, de la coordination et du bon déroulement d’un projet.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl animate-slideIn">
+                        <div class="bg-gray-200 w-48 h-48 mx-auto rounded-full mb-6 overflow-hidden">
+                            <img src="Mr_Diaby.jpeg" alt="Directrice Commerciale" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold">Diaby I.</h4>
+                        <p class="text-[#ff008c] mb-4">Directeur Général</p>
+                        <p class="text-gray-600 mb-4">Avec plus de 20 ans d'expérience dans le développement commercial et la relation client.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl animate-slideIn">
+                        <div class="bg-gray-200 w-48 h-48 mx-auto rounded-full mb-6 overflow-hidden">
+                            <img src="assets/images/team3.jpg" alt="Directeur Technique" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold">Stéphane M.</h4>
+                        <p class="text-[#ff008c] mb-4">Responsable Commercial</p>
+                        <p class="text-gray-600 mb-4">Expert en procédés d'impression et gestion des flux de production.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-auto mt-8 mb-8">
+                    <div class="bg-gray-50 p-8 w-100 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-48 h-48 mx-auto rounded-full mb-6 overflow-hidden">
+                            <img src="Yacou_O.png" alt="Directeur Général" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold">Ouattara Y.</h4>
+                        <p class="text-[#ff008c] mb-4">Chef de projets</p>
+                        <p class="text-gray-600 mb-4">Responsable de la planification, de la coordination et du bon déroulement d’un projet.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-[#0580de] hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative Team -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-[#0580de] mb-8 text-center">Autres membres</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden">
+                            <img src="assets/images/team5.jpg" alt="Développeur" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-bold">Roger C.</h4>
+                        <p class="text-[#ff008c] text-sm mb-3">Développeur</p>
+                        <p class="text-gray-600 text-sm">Spécialiste en création de sites web et d'applications.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden">
+                            <img src="Christ.png" alt="Développeur" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-bold">Christ N.</h4>
+                        <p class="text-[#ff008c] text-sm mb-3">Développeur</p>
+                        <p class="text-gray-600 text-sm">Expert en développement de sites webs et applications.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden">
+                            <img src="Armel.jpeg" alt="Photographe" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-bold">Richard K.</h4>
+                        <p class="text-[#ff008c] text-sm mb-3">Manager et infographe</p>
+                        <p class="text-gray-600 text-sm">Expert dans la gestion des réseaux sociaux.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Production Team -->
+            <!-- <div>
+                <h3 class="text-2xl font-bold text-[#0580de] mb-8 text-center">Équipe Production</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden">
+                            <img src="assets/images/team8.jpg" alt="Responsable Production" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-bold">Alain T.</h4>
+                        <p class="text-[#ff008c] text-sm mb-3">Responsable Production</p>
+                        <p class="text-gray-600 text-sm">Gestion des flux et planning de production.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden">
+                            <img src="assets/images/team9.jpg" alt="Technicien Offset" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-bold">Marcellin K.</h4>
+                        <p class="text-[#ff008c] text-sm mb-3">Technicien Offset</p>
+                        <p class="text-gray-600 text-sm">Expert en réglages machines et contrôle qualité.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="bg-gray-200 w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden">
+                            <img src="assets/images/team10.jpg" alt="Technicien Numérique" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-bold">Bertin A.</h4>
+                        <p class="text-[#ff008c] text-sm mb-3">Technicien Numérique</p>
+                        <p class="text-gray-600 text-sm">Spécialiste en impression numérique grand format.</p>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Team Values -->
+    <section class="py-20 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0580de] mb-4">Nos Valeurs d'Équipe</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Les principes qui guident notre travail quotidien et nos relations avec nos clients.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Collaboration</h3>
+                    <p class="text-gray-600">Nous travaillons ensemble et avec nos clients pour des résultats exceptionnels.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                    <p class="text-gray-600">Nous repoussons constamment les limites de la créativité et de la technologie.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Excellence</h3>
+                    <p class="text-gray-600">Nous visons la perfection dans chaque détail de notre travail.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="text-[#0580de] text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Passion</h3>
+                    <p class="text-gray-600">Nous aimons ce que nous faisons et cela se voit dans nos réalisations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-6 bg-[#0580de] text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Nous sommes prêt à vous accompagner.</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contactez-nous pour discuter de votre projet et découvrir comment nous pouvons vous aider.</p>
+            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-8 py-3 rounded-lg font-medium transition transform hover:scale-105">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="SM_logo.png" alt="Logo SM" class="rounded-full shadow-2xl w-36 h-36">
+                    </div>
+                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication visuelle.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition">Notre Equipe</a></li>
+                        <li><a href="catalogue.html" class="text-gray-400 hover:text-white transition">Catalogue</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-white transition">Projets</a></li>
+                        <li><a href="clients.html" class="text-gray-400 hover:text-white transition">Ils nous font confiance</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Nos services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="catalogue-numerique.html" class="text-gray-400 hover:text-white transition">Impression Numérique</a></li>
+                        <li><a href="catalogue-offset.html" class="text-gray-400 hover:text-white transition">Impression Offset</a></li>
+                        <li><a href="catalogue-communication.html" class="text-gray-400 hover:text-white transition">Communication Visuelle</a></li>
+                        <li><a href="catalogue-gadgeterie.html" class="text-gray-400 hover:text-white transition">Gadgeterie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Yamoussoukro, Centre commercial Mo-Faitai bureau N° 20</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +225 27 30 64 02 78</li>
+                        <li class="flex items-center"><i class="fas fa-mobile-alt mr-2"></i> +225 07 59 72 52 72</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> smartvisuel1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 SMART VISUEL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

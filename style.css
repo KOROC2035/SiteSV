@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Century Gothic:wght@300;400;500;600;700&display=swap');
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slideIn {
+    animation: slideIn 1s ease-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 1s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Custom Styles */
+body {
+    font-family: 'Century Gothic', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Form input focus styles */
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Button hover effect */
+.btn-hover-effect:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Service card hover effect */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+}
+
+/* Animation du marqueur */
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -100%) scale(1); }
+    50% { transform: translate(-50%, -100%) scale(1.05); }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Transition d'apparition */
+.opacity-0 { opacity: 0; }
+.scale-50 { transform: translate(-50%, -100%) scale(0.5); }
+
+#mapMarker {
+    transition: all 0.5s ease-out;
+    transform: translate(-50%, -100%);
+}
+
+/* Style du point rouge */
+#mapMarker div div:nth-child(3) {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Styles pour les modales */
+.modal-container {
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    transition: all 0.3s ease;
+    transform: translateY(-20px);
+}
+
+.modal-active .modal-container {
+    opacity: 1;
+}
+
+.modal-active .modal-content {
+    transform: translateY(0);
+}
+
+/* Empêcher le défilement du corps quand une modale est ouverte */
+.body-no-scroll {
+    overflow: hidden;
+}
+
+/* Styles pour les modales */
+.modal-content {
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.modal-active .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation d'apparition */
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-show {
+    animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+/* Empêcher le défilement du corps quand une modale est ouverte */
+.body-no-scroll {
+    overflow: hidden;
+}
+
+/* Style spécifique pour les images dans les modales */
+.modal-image {
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+    .modal-image {
+        max-height: none;
+        height: 100%;
+    }
+}
+
+/* Animation des cartes de projet */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation des modales */
+.project-modal {
+    transition: opacity 0.3s ease;
+}
+
+.project-modal > div {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-modal:not(.hidden) > div {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Boutons filtres */
+.filter-btn {
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background-color: #0580de;
+    color: white;
+}
