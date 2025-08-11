@@ -10,11 +10,58 @@
     <link href="style.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-<body class="font-poppins bg-gray-50">
+<style>
+    /* Styles MOBILE uniquement */
+        @media (max-width: 767px) {
+            /* 1. HEADER - Logo gauche / Hamburger droite */
+            header.fixed {
+                padding: 0.5rem 1rem;
+            }
+            
+            header .container {
+                display: block;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                margin-top: 0;
+            }
+
+            /* Logo en haut à gauche */
+            #logo-header {
+                display: block !important;
+                height: 50px;
+                width: auto;
+                margin-right: auto;
+            }
+
+            /* Masquer la nav desktop */
+            nav.hidden.md\:flex {
+                display: none !important;
+            }
+
+            /* Menu mobile stylisé */
+            #mobile-menu {
+                padding: 1rem;
+                background: white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+</style>
+<body class="font-Century Gothic bg-gray-50">
     <!-- Header -->
     <header class="fixed h-24 w-full bg-white shadow-md z-50">
         <div class="container mx-auto mt-6 px-6 py-3">
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between mt-4 md:mt-0 gap-70">
+                <!-- Logo mobile -->
+                <img src="SMlogo3.png" alt="Logo SMART VISUEL" id="logo-header" class="hidden">
+                <!-- Bouton hamburger -->
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Menu desktop -->
                 <nav class="hidden md:flex space-x-8 mx-auto">
                     <a href="index.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Accueil</a>
                     <a href="about.html" class="text-[#0580de] hover:text-[#fed403] transition font-bold">À propos</a>
@@ -25,16 +72,11 @@
                     <a href="clients.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Ils nous font confiance</a>
                     <a href="contact.html" class="text-gray-600 hover:text-[#fed403] transition font-bold">Contact</a>
                 </nav>
-                <button class="md:hidden focus:outline-none" id="menu-toggle">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
             </div>
-            <!-- Mobile Menu -->
-            <div class="md:hidden hidden bg-white rounded-lg p-4 mt-4 w-48 border-2 border-[#fed403]" id="mobile-menu">
-                <a href="index.html" class="block py-2 text-gray-600">Accueil</a>
-                <a href="about.html" class="block py-2 text-[#0580de] font-medium">À propos</a>
+            <!-- Menu mobile -->
+            <div class="md:hidden hidden bg-white rounded-lg p-4 mt-4 ml-auto w-48 border-2 border-[#fed403]" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600 font-medium">Accueil</a>
+                <a href="about.html" class="block py-2 text-[#0580de]">À propos</a>
                 <a href="services.html" class="block py-2 text-gray-600">Services</a>
                 <a href="team.html" class="block py-2 text-gray-600 font-medium">Notre Équipe</a>
                 <a href="catalogue.html" class="block py-2 text-gray-600">Catalogue</a>
@@ -118,7 +160,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="text-center">
                     <div class="bg-gray-200 w-40 h-40 mx-auto rounded-full mb-4 overflow-hidden border-4 border-[#ff008c]">
-                        <img src="" alt="Membre de l'équipe" class="w-full h-full object-cover">
+                        <img src="Mr_Tchan.jpeg" alt="Membre de l'équipe" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-xl font-bold">Tchan J.</h3>
                     <p class="text-[#ff008c] mb-2">Responsable Commercial</p>
@@ -161,7 +203,7 @@
                     <div class="flex items-center mb-4">
                         <img src="SM_logo.png" alt="Logo SM" class="rounded-full shadow-2xl w-36 h-36">
                     </div>
-                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication visuelle.</p>
+                    <p class="text-gray-400">Nous concevons des solutions "SMART" pour tous vos projets de communication.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
