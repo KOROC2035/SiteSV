@@ -124,12 +124,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
                 <!-- Projet 1 - Impression Numérique -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 animate-slideInLeft" data-category="numerique">
-                    <img src="assets/images/project1.jpg" alt="Projet Banque CI" class="w-full h-48 object-cover">
+                    <img src="Projet_Betmomo.jpeg" alt="Projet Betmomo" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <span class="text-sm text-[#ff008c] font-medium">Impression Numérique</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Campagne publicitaire Banque CI</h3>
+                        <span class="text-sm text-[#ff008c] font-medium">Communication visuelle</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Projet Betmomo</h3>
                         <p class="text-gray-600 mb-4">Flyers, roll-ups et cartes de visite pour nouvelle offre bancaire.</p>
-                        <button onclick="openProjectModal('banque-ci')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        <button onclick="openProjectModal('betmomo')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
                             Voir le projet →
                         </button>
                     </div>
@@ -137,12 +137,12 @@
 
                 <!-- Projet 2 - Communication Visuelle -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 animate-slideIn" data-category="communication">
-                    <img src="assets/images/project2.jpg" alt="Projet Orange CI" class="w-full h-48 object-cover">
+                    <img src="Projet_Rotary.jpeg" alt="Projet Orange CI" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-[#ff008c] font-medium">Communication Visuelle</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Identité visuelle Orange CI</h3>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Projet Rotary</h3>
                         <p class="text-gray-600 mb-4">Refonte complète pour 20 agences à travers le pays.</p>
-                        <button onclick="openProjectModal('orange-ci')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        <button onclick="openProjectModal('rotary')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
                             Voir le projet →
                         </button>
                     </div>
@@ -150,12 +150,12 @@
 
                 <!-- Projet 3 - Gadgeterie -->
                 <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 animate-slideInRight" data-category="gadgeterie">
-                    <img src="assets/images/project3.jpg" alt="Projet MTN" class="w-full h-48 object-cover">
+                    <img src="SOS_Village.jpeg" alt="Projet MTN" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-[#ff008c] font-medium">Gadgeterie</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Objets promotionnels MTN</h3>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Projet SOS village d'enfants</h3>
                         <p class="text-gray-600 mb-4">5,000 goodies personnalisés pour lancement de produit.</p>
-                        <button onclick="openProjectModal('mtn')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        <button onclick="openProjectModal('sos')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
                             Voir le projet →
                         </button>
                     </div>
@@ -166,9 +166,9 @@
                     <img src="assets/images/project4.jpg" alt="Projet Manuel scolaire" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-[#ff008c] font-medium">Impression Offset</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Manuels scolaires MESS</h3>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Projet E'MOH</h3>
                         <p class="text-gray-600 mb-4">50,000 exemplaires de manuels éducatifs.</p>
-                        <button onclick="openProjectModal('manuel-scolaire')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
+                        <button onclick="openProjectModal('emoh')" class="text-[#0580de] font-medium hover:text-[#fed403] transition focus:outline-none">
                             Voir le projet →
                         </button>
                     </div>
@@ -180,20 +180,20 @@
     </section>
 
     <!-- Project Modals -->
-    <!-- Modal Banque CI -->
-    <div id="modal-banque-ci" class="project-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4">
+    <!-- Modal Betmomo -->
+    <div id="modal-betmomo" class="project-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4">
         <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2">
-                <div class="lg:order-1">
-                    <img src="assets/images/project1.jpg" alt="Projet Banque CI" class="w-full h-full object-cover">
+                <div class="lg:order-1 m-6">
+                    <img src="Betmomo.jpeg" alt="Projet Banque CI" class="w-full h-full object-cover rounded-xl">
                 </div>
                 <div class="p-8 lg:order-2">
                     <div class="flex justify-between items-start mb-6">
                         <div>
                             <span class="text-sm text-[#ff008c] font-medium">Impression Numérique</span>
-                            <h2 class="text-2xl font-bold text-[#0580de] mt-1">Campagne publicitaire Banque CI</h2>
+                            <h2 class="text-2xl font-bold text-[#0580de] mt-1">Projet Betmomo</h2>
                         </div>
-                        <button onclick="closeModal('modal-banque-ci')" class="text-gray-500 hover:text-gray-700">
+                        <button onclick="closeModal('modal-betmomo')" class="text-gray-500 hover:text-gray-700">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -219,6 +219,128 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Rotary -->
+    <div id="modal-rotary" class="project-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="lg:order-1 m-6">
+                    <img src="Rotary2.jpeg" alt="Projet Banque CI" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div class="p-8 lg:order-2">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="text-sm text-[#ff008c] font-medium">Impression Numérique</span>
+                            <h2 class="text-2xl font-bold text-[#0580de] mt-1">Projet Rotary</h2>
+                        </div>
+                        <button onclick="closeModal('modal-rotary')" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="text-gray-600 space-y-4">
+                        <p>Pour le lancement de leur nouvelle offre bancaire, Banque CI nous a confié la production de leurs supports publicitaires.</p>
+                        
+                        <h3 class="text-xl font-semibold text-[#0580de]">Détails du projet :</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>10,000 flyers quadri recto-verso</li>
+                            <li>500 roll-ups grand format 85x200cm</li>
+                            <li>5,000 cartes de visite avec vernis sélectif</li>
+                            <li>Délai de production : 5 jours</li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">
+                                Demander un devis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SOS Village d'enfant -->
+    <div id="modal-sos" class="project-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="lg:order-1 m-6">
+                    <img src="Bannière_SOS.png" alt="Projet Banque CI" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div class="p-8 lg:order-2">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="text-sm text-[#ff008c] font-medium">Impression Numérique</span>
+                            <h2 class="text-2xl font-bold text-[#0580de] mt-1">Projet Rotary</h2>
+                        </div>
+                        <button onclick="closeModal('modal-sos')" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="text-gray-600 space-y-4">
+                        <p>Pour le lancement de leur nouvelle offre bancaire, Banque CI nous a confié la production de leurs supports publicitaires.</p>
+                        
+                        <h3 class="text-xl font-semibold text-[#0580de]">Détails du projet :</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>10,000 flyers quadri recto-verso</li>
+                            <li>500 roll-ups grand format 85x200cm</li>
+                            <li>5,000 cartes de visite avec vernis sélectif</li>
+                            <li>Délai de production : 5 jours</li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">
+                                Demander un devis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal E'MOH -->
+    <div id="modal-emoh" class="project-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="lg:order-1 m-6">
+                    <img src="" alt="Projet Banque CI" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div class="p-8 lg:order-2">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="text-sm text-[#ff008c] font-medium">Impression Numérique</span>
+                            <h2 class="text-2xl font-bold text-[#0580de] mt-1">Projet E'MOH</h2>
+                        </div>
+                        <button onclick="closeModal('modal-emoh')" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="text-gray-600 space-y-4">
+                        <p>Pour le lancement de leur nouvelle offre bancaire, Banque CI nous a confié la production de leurs supports publicitaires.</p>
+                        
+                        <h3 class="text-xl font-semibold text-[#0580de]">Détails du projet :</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>10,000 flyers quadri recto-verso</li>
+                            <li>500 roll-ups grand format 85x200cm</li>
+                            <li>5,000 cartes de visite avec vernis sélectif</li>
+                            <li>Délai de production : 5 jours</li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html" class="inline-block bg-[#ff008c] hover:bg-[#ff0052] text-white px-6 py-2 rounded-lg font-medium transition">
+                                Demander un devis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Ajoutez d'autres modales pour chaque projet avec la même structure -->
 
