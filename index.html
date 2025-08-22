@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMART VISUEL - Imprimerie & Communication</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Centhury Gothic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
     <style>
+        body {
+            font-family: 'Century Gothic', sans-serif;
+        }
+        
         /* Styles MOBILE uniquement */
         @media (max-width: 767px) {
             /* 1. HEADER - Logo gauche / Hamburger droite */
@@ -85,10 +87,115 @@
                 padding: 1rem;
                 height: auto;
             }
+            
+            /* Ajustements pour le slider */
+            .bg-slides-container {
+                height: 300px !important;
+            }
+            
+            .nav-btn {
+                width: 40px !important;
+                height: 40px !important;
+            }
+        }
+
+        /* Styles pour l'animation des images de fond */
+        .bg-slides-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            z-index: 1;
+        }
+        
+        .bg-slide.active {
+            opacity: 1;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 3;
+        }
+        
+        /* Indicateurs de slide */
+        .slide-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 4;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        /* Boutons de navigation */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 4;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        
+        .prev-btn {
+            left: 20px;
+        }
+        
+        .next-btn {
+            right: 20px;
         }
     </style>
 </head>
-<body class="font-Century Gothic bg-gray-50">
+<body class="bg-gray-50">
     <!-- Header -->
     <header class="fixed h-24 w-full bg-white shadow-md z-50">
         <div class="container mx-auto mt-6 px-6 py-3">
@@ -129,7 +236,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-2 lg:pt-24 bg-[#38b0e5] text-white h-screen">
+    <section class="pt-24 pb-2 lg:pt-24 bg-[#38b0e5] text-white">
         <div class="container pt-6 md:flex flex-col md:flex-row items-center md:gap-12 mx-auto px-4 md:ml-24">
             <div class="hidden md:block md:w-1/2 h-96 animate-slideIn hero-image">
                 <img src="SV.jpeg" alt="Logo SM" class="mt-4 md:pr-16">
@@ -147,7 +254,34 @@
         <div class="h-24 w-full bg-[#fed403] z-50 text-2xl md:text-5xl px-4 py-4 text-center text-[#000000] font-bold flex items-center justify-center">
             IMPRESSION NUMERIQUE - OFFSET & COMMUNICATION VISUELLE.
         </div>
-        <div class="py-32 bg-[url('Imprimerie_2.png')] bg-cover bg-center h-96"></div>
+        
+        <!-- Conteneur pour les images de fond avec animation -->
+        <div class="bg-slides-container">
+            <!-- Images de fond -->
+            <div class="bg-slide active" style="background-image: url('Imprimerie-2.png');"></div>
+            <div class="bg-slide" style="background-image: url('Communication_visuelle.jpg');"></div>
+            <div class="bg-slide" style="background-image: url('Offset-Printing.jpeg');"></div>
+            <div class="bg-slide" style="background-image: url('Gadgeterie2.jpg');"></div>
+            
+            <!-- Overlay sombre -->
+            <div class="overlay"></div>
+            
+            <!-- Boutons de navigation -->
+            <button class="nav-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Indicateurs de slide -->
+            <div class="slide-indicators">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
+                <div class="indicator" data-index="3"></div>
+            </div>
+        </div>
         <h2 class="mb-4 text-3xl lg:text-5xl font-bold text-center mt-4 mx-4 animate-pulse">Nous recherchons chez vous, l'effet WAAAAAOUH !</h2>
     </section>
 
@@ -161,7 +295,7 @@
                         <i class="fas fa-print"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Impression Numérique</h3>
-                    <p class="text-gray-600">Des impressions haute qualité pour tous vos besoins: flyers, cartes de visite, affiches et plus encore.</p>
+                    <p class="text-gray-600">Des impressions de haute qualité pour tous vos besoins: flyers, cartes de visite, affiches et plus encore.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
                     <div class="text-[#0580de] text-4xl mb-4">
@@ -290,3 +424,99 @@
     </footer>
 </body>
 </html>
+
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+            // Gestion du menu mobile
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Gestion du slider d'images de fond
+            const slides = document.querySelectorAll('.bg-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentSlide = 0;
+            let slideInterval;
+            
+            // Fonction pour afficher un slide spécifique
+            function showSlide(index) {
+                // Masquer tous les slides
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                // Afficher le slide demandé
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            // Slide suivant
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+            
+            // Slide précédent
+            function prevSlide() {
+                let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+            
+            // Démarrer l'automatisation
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, 7000);
+            }
+            
+            // Arrêter l'automatisation
+            function stopSlideShow() {
+                clearInterval(slideInterval);
+            }
+            
+            // Événements pour les boutons de navigation
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function() {
+                    stopSlideShow();
+                    nextSlide();
+                    startSlideShow();
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function() {
+                    stopSlideShow();
+                    prevSlide();
+                    startSlideShow();
+                });
+            }
+            
+            // Événements pour les indicateurs
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    stopSlideShow();
+                    let slideIndex = parseInt(this.getAttribute('data-index'));
+                    showSlide(slideIndex);
+                    startSlideShow();
+                });
+            });
+            
+            // Démarrer le défilement automatique
+            if (slides.length > 0) {
+                startSlideShow();
+                
+                // Arrêter le défilement lorsque la souris est sur la section
+                const slidesContainer = document.querySelector('.bg-slides-container');
+                if (slidesContainer) {
+                    slidesContainer.addEventListener('mouseenter', stopSlideShow);
+                    slidesContainer.addEventListener('mouseleave', startSlideShow);
+                }
+            }
+        });
+</script>
